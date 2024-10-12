@@ -64,9 +64,9 @@ export default {
 
     const params = new URL(request.url).searchParams;
     const myIp = params.get("myIp");
-    const domain = params.get("domain");
+    const hostname = params.get("hostname");
 
-    if (!myIp || !domain) {
+    if (!myIp || !hostname) {
       return new Response("Missing required parameters.", {
         status: 400,
       });
@@ -82,7 +82,7 @@ export default {
 
     const body = JSON.stringify({
       type: "A",
-      name: domain,
+      name: hostname,
       content: myIp,
       ttl: 3600,
       proxied: false,

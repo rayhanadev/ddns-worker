@@ -27,7 +27,7 @@ CLOUDFLARE_DNS_RECORD_ID=
 Configure your router use the following URL for updates:
 
 ```txt
-https://[USERNAME]:[PASSWORD]@ddns-worker.<account_name>.workers.dev/?myip=[MYIP]&domain=[DOMAIN]
+https://[USERNAME]:[PASSWORD]@ddns-worker.<account_name>.workers.dev/?myip=[MYIP]&hostname=[HOSTNAME]
 ```
 
 And you should have Dynamic DNS set up on your router!
