@@ -63,7 +63,7 @@ export default {
     }
 
     const params = new URL(request.url).searchParams;
-    const myIp = params.get("myIp");
+    const myIp = params.get("myip");
     const hostname = params.get("hostname");
 
     if (!myIp || !hostname) {
