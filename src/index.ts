@@ -73,12 +73,14 @@ export default {
     }
 
     const CLOUDFLARE_API_KEY = env.CLOUDFLARE_API_KEY;
+		const CLOUDFLARE_AUTH_EMAIL = env.CLOUDFLARE_AUTH_EMAIL;
     const CLOUDFLARE_ZONE_ID = env.CLOUDFLARE_ZONE_ID;
     const CLOUDFLARE_DNS_RECORD_ID = env.CLOUDFLARE_DNS_RECORD_ID;
 
     const headers = new Headers();
     headers.set("Content-Type", "application/json");
-    headers.set("X-Auth-Key", CLOUDFLARE_API_KEY);
+    headers.set("Authorization", `Bearer ${CLOUDFLARE_API_KEY}`);
+    headers.set("X-Auth-Email", CLOUDFLARE_AUTH_EMAIL);
 
     const body = JSON.stringify({
       type: "A",
